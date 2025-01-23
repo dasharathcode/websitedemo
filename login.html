@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="./assets/css/login.css">
+
+   <title> Log in to Manage Restaurant
+      Access your admin dashboard to update menus, orders, and more</title>
+</head>
+
+<body>
+   <!-- your image (recommended size: 1000 x 1200)  -->
+   <image class="login__img" href="./assets/" />
+   </g>
+   </svg>
+
+   <!--=============== LOGIN ===============-->
+   <div class="login container grid" id="loginAccessRegister">
+      <!--===== LOGIN ACCESS =====-->
+      <div class="login__access">
+         <h1 class="login__title">Log In To Admin Access </h1>
+
+         <div class="login__area">
+            <form id="loginForm" class="login__form">
+               <div class="login__content grid">
+                  <div class="login__box">
+                     <input type="text" id="username" required placeholder=" " class="login__input">
+                     <label for="email" class="login__label">username</label>
+
+                     <i class="ri-mail-fill login__icon"></i>
+                  </div>
+
+                  <div class="login__box">
+                     <input type="password" id="password" required placeholder=" " class="login__input">
+                     <label for="password" class="login__label">Password</label>
+
+                     <i class="ri-eye-off-fill login__icon login__password" id="loginPassword"></i>
+                  </div>
+               </div>
+               <button type="submit" class="login__button">Login</button>
+            </form>
+         </div>
+      </div>
+      <!--=============== MAIN JS ===============-->
+
+
+
+      <script>/*=============== SHOW HIDE PASSWORD LOGIN ===============*/
+         const passwordAccess = (loginPass, loginEye) => {
+            const input = document.getElementById(loginPass),
+               iconEye = document.getElementById(loginEye)
+
+            iconEye.addEventListener('click', () => {
+               // Change password to text
+               input.type === 'password' ? input.type = 'text'
+                  : input.type = 'password'
+
+               // Icon change
+               iconEye.classList.toggle('ri-eye-fill')
+               iconEye.classList.toggle('ri-eye-off-fill')
+            })
+         }
+         passwordAccess('password', 'loginPassword')
+      </script>
+      <script src="script.js"></script>
+</body>
+
+</html>
